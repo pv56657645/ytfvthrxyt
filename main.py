@@ -1,7 +1,4 @@
 import telebot
-import random
-
-yes_nol = ["Да", "Нет"]
 
 tokin = '1749862558:AAEueIJsfOQ1FWlNDGtP5BunzAq77UsH7bg'
 
@@ -13,6 +10,7 @@ def start(m, res=False):
 
 @bot.message_handler(content_types=['text'])
 def handle_text(message):
-        bot.send_message(message.chat.id, random.choice(yes_nol))
+
+    bot.send_message(message.chat.id, "ДА!")
 
 bot.polling(none_stop=True, interval=0)
